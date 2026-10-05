@@ -1,0 +1,92 @@
+.container {
+  /* margin: 0% 12%; */
+  background-size: cover;
+  background-position: 50%;
+  border: 1px solid bule;
+  border-radius: 25%;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
+}
+
+.form {
+  width: 100%;
+}
+
+.myInlineStyle {
+  background-color: rgba(225, 225, 225, 0.3);
+  /* box-shadow: 0px 8px 32px 0 rgba(0, 0, 225, 0.3); */
+  backdrop-filter: blur(3px);
+  padding: 0 0;
+}
+
+.column {
+  background-image: url(bo-trang-suc-bac-nice-flower-pearl_1_.png);
+  background-size: cover;
+}
+
+.brand {
+  margin-top: 140px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.title {
+  color: rgb(66, 66, 226);
+  font-size: 50px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.slogan {
+  font-size: 30px;
+  font-weight: 200;
+  font-style: italic;
+}
+.img {
+  border: 1px solid;
+  border-radius: 2%;
+}
+.link {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.container2 {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .myInlineStyle {
+    padding: 0rem 0rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container2 {
+    display: contents;
+    /* width: 75%; */
+  }
+
+  .container {
+    display: none;
+  }
+
+  .tablet {
+    width: 100%;
+  }
+
+  .form {
+    /* margin-left: 15%; */
+    width: 100%;
+  }
+}
+
+@media screen and (width <=1024px) {
+  .title {
+    font-size: 40px;
+  }
+  .slogan {
+    font-size: 25px;
+  }
+}

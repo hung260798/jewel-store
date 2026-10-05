@@ -1,0 +1,87 @@
+/* Lớp phủ toàn màn hình */
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    #f4f7ff 0%,
+    #e9efff 45%,
+    #ffffff 100%
+  );
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  z-index: 9999; /* Đảm bảo luôn nằm trên cùng */
+  opacity: 1; /* Mặc định hiển thị */
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0.5s ease-out;
+  visibility: visible;
+  backdrop-filter: blur(2px);
+}
+
+/* Class này được thêm vào khi component sắp biến mất */
+.loadingOverlay.fadeOut {
+  opacity: 0;
+  /* Dùng visibility: hidden để đảm bảo không thể click xuyên qua khi đã mờ */
+  visibility: hidden;
+}
+
+/* Container cho các thanh loading */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa các thanh */
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bar {
+  width: 10px;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #4f7bff 0%, #7aa2ff 60%, #b4c8ff 100%);
+  box-shadow: 0 6px 16px rgba(79, 123, 255, 0.35);
+  transform-origin: center bottom;
+  animation: bar-loading 1.05s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Định nghĩa hiệu ứng */
+@keyframes bar-loading {
+  0% {
+    transform: translateY(6px) scaleY(0.55);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-4px) scaleY(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(6px) scaleY(0.55);
+    opacity: 0.6;
+  }
+}
+
+/* Áp dụng độ trễ cho từng thanh để tạo hiệu ứng nhịp nhàng */
+.bar1 {
+  animation-delay: 0s;
+}
+.bar2 {
+  animation-delay: 0.15s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    animation: none;
+    transform: scaleY(0.9);
+  }
+}

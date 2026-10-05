@@ -1,0 +1,82 @@
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.group:hover .group-hover\:animate-shine {
+  animation: shine 0.8s ease-in-out;
+}
+
+.slideInUp {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.fadeInScale {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+.ctn {
+  padding-inline: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .ctn {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ctn {
+    width: 540px;
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ctn {
+    width: 830px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ctn {
+    width: 1120px;
+  }
+}
+
+.popularCategories {
+  background-image: url("/Union.png");
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  background-color: white;
+}

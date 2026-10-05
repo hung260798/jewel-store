@@ -1,0 +1,36 @@
+.root :global .ant-pagination {
+  align-items: baseline;
+}
+
+@media (max-width: 640px) {
+  .root :global .ant-pagination {
+    flex-wrap: wrap;
+  }
+}
+
+.root :global .ant-pagination-item {
+  border-radius: 4px;
+  border: none;
+}
+
+.root :global .ant-pagination-item,
+.root :global .ant-pagination-jump-prev,
+.root :global .ant-pagination-jump-next,
+.root :global .ant-pagination-prev,
+.root :global .ant-pagination-next {
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+}
+
+.root :global .ant-pagination-item a {
+  color: #666;
+}
+
+.root :global .ant-pagination-item-active {
+  background: #1677ff;
+}
+
+.root :global .ant-pagination-item-active a {
+  color: white;
+}

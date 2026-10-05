@@ -1,0 +1,22 @@
+.root {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30rem;
+  margin: 0;
+  /* background-color: #f9f9f9; */
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #555;
+}
+
+.emptyMessage svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  fill: #ccc;
+  display: inline;
+}

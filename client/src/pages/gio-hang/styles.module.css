@@ -1,0 +1,222 @@
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 28px auto 110px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 22px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: linear-gradient(112deg, #3b1d70, #6d28d9 62%, #8b5cf6);
+  color: #fff;
+  box-shadow: 0 15px 34px rgba(91, 33, 182, 0.18);
+}
+.heroIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 23px;
+}
+.hero p {
+  margin: 0 0 3px;
+  color: #ddd6fe;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+.hero span {
+  color: #ede9fe;
+  font-size: 13px;
+}
+.cartContent {
+  min-height: 400px;
+}
+.loginPrompt {
+  max-width: 480px;
+  margin: 70px auto;
+  padding: 43px 32px;
+  border: 1px solid #e9e4f3;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(41, 35, 76, 0.06);
+}
+.promptIcon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 15px;
+  place-items: center;
+  border-radius: 16px;
+  background: #f0eaff;
+  color: #6d28d9;
+  font-size: 23px;
+}
+.loginPrompt h2 {
+  margin: 0 0 8px;
+  color: #302b48;
+  font-size: 20px;
+}
+.loginPrompt p {
+  margin: 0 0 22px;
+  color: #77738b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.loginPrompt a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 17px;
+  border-radius: 9px;
+  background: #6d28d9;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.loginPrompt a:hover {
+  background: #5b21b6;
+  color: #fff;
+}
+.summaryCard {
+  overflow: hidden;
+  border: 1px solid #e6e1ef !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(41, 35, 76, 0.1);
+}
+.summary {
+  display: grid;
+  grid-template-columns: auto minmax(130px, 1fr) minmax(170px, 1fr) auto;
+  align-items: center;
+  gap: 25px;
+  padding: 17px 22px;
+  background: #fff;
+}
+.summarySelect {
+  font-weight: 650;
+  white-space: nowrap;
+}
+.summaryCount {
+  cursor: pointer;
+}
+.summaryCount span,
+.summaryTotal span {
+  display: block;
+  margin-bottom: 3px;
+  color: #89859b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.summaryCount strong {
+  color: #504a62;
+  font-size: 14px;
+}
+.summaryTotal {
+  text-align: right;
+}
+.summaryTotal strong {
+  color: #d94667;
+  font-size: 20px;
+}
+.summaryActions {
+  display: flex;
+  gap: 9px;
+}
+.checkoutButton,
+.continueButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.checkoutButton {
+  border: 1px solid #6d28d9;
+  background: #6d28d9;
+  color: #fff;
+}
+.checkoutButton:hover {
+  border-color: #5b21b6;
+  background: #5b21b6;
+}
+.checkoutButtonDisabled,
+.checkoutButtonDisabled:hover {
+  border-color: #c4bdd0;
+  background: #c4bdd0;
+  cursor: not-allowed;
+}
+.continueButton {
+  border: 1px solid #ddd7e9;
+  background: #fff;
+  color: #604f84;
+}
+.continueButton:hover {
+  border-color: #8b5cf6;
+  color: #6d28d9;
+}
+
+@media (max-width: 767px) {
+  .page {
+    width: min(100% - 16px, 1120px);
+    margin-top: 12px;
+  }
+  .hero {
+    margin-bottom: 18px;
+    padding: 18px;
+  }
+  .hero h1 {
+    font-size: 22px;
+  }
+  .hero span {
+    display: block;
+    line-height: 1.45;
+  }
+  .summary {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 14px;
+  }
+  .summaryCount {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .summaryTotal {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .summaryTotal strong {
+    font-size: 17px;
+  }
+  .summaryActions {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .checkoutButton,
+  .continueButton {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+  }
+}

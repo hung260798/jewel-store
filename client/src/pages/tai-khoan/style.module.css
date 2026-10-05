@@ -1,0 +1,117 @@
+.container {
+  margin-top: 0px;
+}
+
+.ordersCard {
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(31, 42, 68, 0.08);
+  border: 1px solid rgba(79, 123, 255, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 4px;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 123, 255, 0.12),
+    rgba(122, 162, 255, 0.22)
+  );
+  padding: 10px 14px;
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.statLabel {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.statValue {
+  margin: 0;
+  color: #1f2a44;
+}
+
+.ordersTable :global(.ant-table) {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ordersTable :global(.ant-table-thead > tr > th) {
+  background: #f4f6ff;
+  color: #1f2a44;
+  font-weight: 600;
+  border-bottom: 0;
+}
+
+.ordersTable :global(.ant-table-tbody > tr:nth-child(odd) > td) {
+  background: #fafbff;
+}
+
+.ordersTable :global(.ant-table-tbody > tr:hover > td) {
+  background: #eef2ff;
+}
+
+.ordersTable :global(.ant-table-cell) {
+  padding: 14px 16px;
+}
+
+.statusTag {
+  border: none;
+  font-weight: 600;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+.actionButton {
+  border-radius: 999px;
+}
+
+.addressCell {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.orderDetailsTable :global(.ant-table) {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.orderDetailsTable :global(.ant-table-thead > tr > th) {
+  background: #f8f9ff;
+  font-weight: 600;
+}
+
+.orderDescriptions :global(.ant-descriptions-item-label) {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .statCard {
+    min-width: 140px;
+  }
+}

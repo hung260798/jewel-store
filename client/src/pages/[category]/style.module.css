@@ -1,0 +1,3 @@
+.productsSection {
+  composes: productsSection from '@/pages/san-pham/[id]/index.module.css';
+}
